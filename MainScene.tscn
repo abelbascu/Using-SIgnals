@@ -1,19 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://6smcdbqbm328"]
 
-[ext_resource type="PackedScene" uid="uid://clns313rjpfmf" path="res://EmitterNode.tscn" id="1_tuvph"]
-[ext_resource type="PackedScene" uid="uid://dko1rp1eag0yd" path="res://SubscriberNodeA.tscn" id="2_8qfc0"]
-[ext_resource type="PackedScene" uid="uid://4et6d34suro3" path="res://SubscriberNodeB.tscn" id="3_pd8p6"]
-[ext_resource type="PackedScene" uid="uid://co4u672x2nvil" path="res://DelayTimer.tscn" id="4_cdtvo"]
+[ext_resource type="PackedScene" uid="uid://clns313rjpfmf" path="res://Scenes/EmitterNode.tscn" id="1_tuvph"]
+[ext_resource type="Script" path="res://MainScene.cs" id="1_xlda7"]
+[ext_resource type="PackedScene" uid="uid://dko1rp1eag0yd" path="res://Scenes/SubscriberNodeA.tscn" id="2_8qfc0"]
+[ext_resource type="PackedScene" uid="uid://4et6d34suro3" path="res://Scenes/SubscriberNodeB.tscn" id="3_pd8p6"]
 
 [node name="MainScene" type="Node2D"]
+script = ExtResource("1_xlda7")
+
+[node name="EmitterNode" parent="." instance=ExtResource("1_tuvph")]
+position = Vector2(151, 221)
 
 [node name="SubscriberNodeA" parent="." instance=ExtResource("2_8qfc0")]
 position = Vector2(755, 170)
 
 [node name="SubscriberNodeA2" parent="." instance=ExtResource("3_pd8p6")]
 position = Vector2(754, 430)
-
-[node name="EmitterNode" parent="." instance=ExtResource("1_tuvph")]
-position = Vector2(151, 221)
-
-[node name="delayTimer" parent="." instance=ExtResource("4_cdtvo")]
