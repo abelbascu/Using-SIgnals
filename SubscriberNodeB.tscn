@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://4et6d34suro3"]
+
+[ext_resource type="Texture2D" uid="uid://cc87ttorom2mx" path="res://icon.svg" id="2_6qsqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nwvs"]
+
+[node name="SubscriberNodeB" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8nwvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.113725, 0.733333, 1, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_6qsqe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -58.0
+offset_top = -61.0
+offset_right = 70.0
+offset_bottom = -38.0
+text = "Subscriber Node A"

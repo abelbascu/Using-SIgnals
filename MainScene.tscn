@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://6smcdbqbm328"]
+
+[ext_resource type="PackedScene" uid="uid://clns313rjpfmf" path="res://EmitterNode.tscn" id="1_tuvph"]
+[ext_resource type="PackedScene" uid="uid://dko1rp1eag0yd" path="res://SubscriberNodeA.tscn" id="2_8qfc0"]
+[ext_resource type="PackedScene" uid="uid://4et6d34suro3" path="res://SubscriberNodeB.tscn" id="3_pd8p6"]
+[ext_resource type="PackedScene" uid="uid://co4u672x2nvil" path="res://DelayTimer.tscn" id="4_cdtvo"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="SubscriberNodeA" parent="." instance=ExtResource("2_8qfc0")]
+position = Vector2(755, 170)
+
+[node name="SubscriberNodeA2" parent="." instance=ExtResource("3_pd8p6")]
+position = Vector2(754, 430)
+
+[node name="EmitterNode" parent="." instance=ExtResource("1_tuvph")]
+position = Vector2(151, 221)
+
+[node name="delayTimer" parent="." instance=ExtResource("4_cdtvo")]

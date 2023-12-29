@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://co4u672x2nvil"]
+
+[node name="delayTimer" type="Timer"]
